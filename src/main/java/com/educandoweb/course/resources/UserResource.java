@@ -1,6 +1,6 @@
 package com.educandoweb.course.resources;
 
-import com.educandoweb.course.Services.UserService;
+import com.educandoweb.course.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
