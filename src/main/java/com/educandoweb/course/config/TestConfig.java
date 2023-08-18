@@ -43,13 +43,13 @@ public class TestConfig implements CommandLineRunner {
 		Order o2 = new Order(null, Instant.parse("2021-08-18T18:04:55Z"), OrderStatus.PAID, u2);
 		Order o3 = new Order(null, Instant.parse("2022-09-18T19:05:56Z"), OrderStatus.WAITING_PAYMENT, u1);
 
-		Product p1 = new Product(null, "Batata", "Pacote de batatas", 10.00, "batata.png");
-		Product p2 = new Product(null, "S23+ 512gb", "Celular brabo", 4500.00, "batata.png");
-		Product p3 = new Product(null, "Carrinho de controle remoto", "Carrinho de controle remoto", 249.97, "batata.png");
-
 		Category c1 = new Category(null, "Brinquedos");
 		Category c2 = new Category(null, "Comidas");
 		Category c3 = new Category(null, "Eletrônicos");
+
+		Product p1 = new Product(null, "Batata", "Pacote de batatas", 10.00, "batata.png");
+		Product p2 = new Product(null, "S23+ 512gb", "Celular brabo", 4500.00, "batata.png");
+		Product p3 = new Product(null, "Carrinho de controle remoto", "Carrinho de controle remoto", 249.97, "batata.png");
 
 		userRepository.saveAll(Arrays.asList(u1, u2));
 

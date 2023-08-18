@@ -3,7 +3,9 @@ package com.educandoweb.course.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_product")
@@ -17,6 +19,8 @@ public class Product implements Serializable {
     private String description;
     private Double price;
     private String imgUrl;
+    @Transient
+    private Set<Category> categories = new HashSet<>();
 
     public Product() {
     }
@@ -63,6 +67,10 @@ public class Product implements Serializable {
 
     public String getImgUrl() {
         return imgUrl;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
     }
 
     public void setImgUrl(String imgUrl) {
