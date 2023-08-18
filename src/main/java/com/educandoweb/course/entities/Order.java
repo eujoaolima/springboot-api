@@ -22,6 +22,9 @@ public class Order implements Serializable {
     @JoinColumn(name = "client_id")
     private User client;
 
+    // ManyToMany orders em relação a Product
+    // Vai conter uma lista de itens
+
 
     public Order() {
     }
